@@ -54,18 +54,11 @@ function getTime(date) {
  * '2024-01-30T00:00:00.000Z' => 'Tuesday'
  */
 function getDayName(date) {
-  const days = {
-    0: 'Sunday',
-    1: 'Monday',
-    2: 'Tuesday',
-    3: 'Wednesday',
-    4: 'Thursday',
-    5: 'Friday',
-    6: 'Saturday',
-  };
-  const indexOfDay = new Date(date).getDay();
+  const dayName = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(
+    new Date(date)
+  );
 
-  return days[indexOfDay];
+  return dayName;
 }
 
 /**
