@@ -318,13 +318,8 @@ function getWorkSchedule(/* period, countWorkDays, countOffDays */) {
  */
 function isLeapYear(date) {
   const year = date.getFullYear();
-  let isLeap = false;
 
-  if (year % 4 === 0) {
-    isLeap = true;
-  }
-
-  return isLeap;
+  return year % 4 === 0;
 }
 
 module.exports = {
